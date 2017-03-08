@@ -12,3 +12,7 @@ Use `data-prefetch="true"` to preload pages
 2. Native button `<button data-role="none">Button</button>`
 
 3. Login/submit `<form><input type="submit" value="Submit"></form>`
+4. Grid: http://demos.jquerymobile.com/1.4.5/grids/
+5. Loader: http://demos.jquerymobile.com/1.4.5/loader/
+6. Disabled Range slide: http://demos.jquerymobile.com/1.4.5/rangeslider/
+7. Buttons in tool bar: http://demos.jquerymobile.com/1.4.5/toolbar/
