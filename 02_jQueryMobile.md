@@ -30,3 +30,4 @@ $("#page-splash").on("pageshow", function() {
 }, 2000);
 });
 ```
+Event order: http://www.gajotres.net/page-events-order-in-jquery-mobile/
