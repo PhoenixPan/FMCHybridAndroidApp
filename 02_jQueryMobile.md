@@ -16,3 +16,17 @@ Use `data-prefetch="true"` to preload pages
 5. Loader: http://demos.jquerymobile.com/1.4.5/loader/
 6. Disabled Range slide: http://demos.jquerymobile.com/1.4.5/rangeslider/
 7. Buttons in tool bar: http://demos.jquerymobile.com/1.4.5/toolbar/
+
+# Page
+One page is showed at a time. We can trigger events at different stages of page activity. 
+
+```
+// Flip to main page after a certain period
+$("#page-splash").on("pageshow", function() {
+    setTimeout(function () {
+    $("body").pagecontainer("change", "#page-index", {
+        transition: "flip"
+    });
+}, 2000);
+});
+```
