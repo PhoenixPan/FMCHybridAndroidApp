@@ -31,3 +31,16 @@ $("#page-splash").on("pageshow", function() {
 });
 ```
 Event order: http://www.gajotres.net/page-events-order-in-jquery-mobile/
+
+## Use original functions from JavaScript
+Use "bind" and write original functions in between:
+
+```
+
+$("#register-age").bind("change", function (event, ui) {
+    var registerAgeIndex = document.querySelector("#register-age").selectedIndex; // selectedIndex does not work in jQ Mobile
+    if (registerAgeIndex == 1) {
+        document.querySelector("register-underage-hint").css("display", "block")
+    }
+});
+```
