@@ -46,3 +46,8 @@ $("#register-age").bind("change", function (event, ui) {
 ```
 
 ## Submit form
+
+## Open external links
+```
+<a target="_blank" data-rel="external" href="https://www.example.com">Link</a>
+```
