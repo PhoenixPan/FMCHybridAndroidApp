@@ -44,3 +44,5 @@ $("#register-age").bind("change", function (event, ui) {
     }
 });
 ```
+
+## Submit form
