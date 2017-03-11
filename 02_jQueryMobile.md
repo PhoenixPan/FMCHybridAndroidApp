@@ -51,3 +51,12 @@ $("#register-age").bind("change", function (event, ui) {
 ```
 <a target="_blank" data-rel="external" href="https://www.example.com">Link</a>
 ```
+
+
+## Checkbox position adjustion
+1.2em
+```
+.checkbox-control-div .ui-block-a input {
+    height: 1.2em;
+}
+```
