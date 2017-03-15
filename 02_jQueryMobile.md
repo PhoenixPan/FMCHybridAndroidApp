@@ -60,3 +60,98 @@ $("#register-age").bind("change", function (event, ui) {
     height: 1.2em;
 }
 ```
+
+## Validation
+```
+// Registration form handler
+$("#register-form").ready(function() {
+    $("#register-form").validate({
+        rules: {
+            fname: {
+                required: true
+            },
+            lname: {
+                required: true
+            },
+            gender: {
+                required: true
+            },
+            age: {
+                required: true
+            },
+            under18checkbox: {
+                // Conditional requirement, required only if one age has been selected
+                required: function() {
+                    return  document.querySelector("#register-age").selectedIndex == 1; 
+                }
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            postcode: {
+                required: true,
+                digits: true  // digits only
+            },
+            password: {
+                required: true,
+                minlength: 6
+            },
+            passwordconfirm: {
+                required: true,
+                minlength: 6,
+                equalTo: "#register-password"
+            },
+            policy: {
+                required: true
+            }
+        },
+        messages: {
+            fname: {
+                required: "First name is required"
+            },
+            lname: {
+                required: "Last name is required"
+            },
+            gender: {
+                required: "The gender you identify as is required"
+            },
+            age: {
+                required: "Your age is required"
+            },
+            under18checkbox: {
+                required: "Your parent or guardian must accept the above Terms of Use, Guidlines, and Privacy Policy"
+            },
+            email: {
+                required: "Email address is required",
+                email: "Please enter a valid email address"
+            },
+            postcode: {
+                required: "Your postcode is required",
+                digits: "Postcode should contain only digits"
+            },
+            password: {
+                required: "Password is required",
+                minlength: "Your password should have at least 6 digits"
+            },
+            passwordconfirm: {
+                required: "Password confirmation is required",
+                minlength: "Your password should have at least 6 digits",
+                equalTo: "Password does not match"
+            },
+            policy: {
+                required: "You must accept the above Terms of Use, Guidlines, and Privacy Policy."
+            }
+        },
+        errorPlacement: function(error, element) {
+            error.insertAfter(element.parent("div"));
+        },
+        submitHandler: function () {
+            $("body").pagecontainer('change', '#page-confirm', {
+                reload: false
+            });
+            return false;
+        }
+    });
+});
+```
