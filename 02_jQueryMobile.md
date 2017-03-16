@@ -155,3 +155,4 @@ $("#register-form").ready(function() {
     });
 });
 ```
+### Form submission
